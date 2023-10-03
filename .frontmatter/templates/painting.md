@@ -1,0 +1,30 @@
+---
+title: hjk
+description: " k l l l l l kj jkjm"
+image: ""
+forSale: "true"
+price: 0
+type: painting
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paninting Pilar Elias Art</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <h1>Pilar Elias <br> Art</h1>
+    <section>
+        <img class="painting" src="assets/painting 1.jpg" alt=""> 
+        <h2>Something name</h2>
+        <p>
+         210 x 120 cm<br>Acrylic on canvas<br>700$
+        </p>
+        <div class="center-content">
+            <a href="" class="button">Buy it now</a>
+        </div>
+    </section>
+</body>
+</html>
