@@ -1,0 +1,115 @@
+@font-face{
+    font-family: 'space-mono';
+    src: url(fonts/SpaceMono-Bold.ttf) format(truetype);
+    font-weight: bold;
+    font-style:normal;
+} 
+@font-face{
+    font-family: 'space-mono';
+    src: url(fonts/SpaceMono-BoldItalic.ttf) format(truetype);
+    font-weight: bold;
+    font-style:italic;
+} 
+@font-face{
+    font-family: 'space-mono';
+    src: url(fonts/SpaceMono-Italic.ttf) format(truetype);
+    font-weight: normal;
+    font-style:italic;
+} 
+@font-face{
+    font-family: 'space-mono';
+    src: url(fonts/SpaceMono-Regular.ttf) format(truetype);
+    font-weight: normal;
+    font-style:normal;
+} 
+@font-face{
+    font-family: 'Questrial';
+    src: url(fonts/Questrial-Regular.ttf);
+    font-weight: normal;
+}
+::selection {
+    background-color: #faeb6c; 
+    color: #080808; 
+    text-shadow: none;
+}
+body {
+    margin: 0;
+    background-color: rgb(28, 27, 27);
+    font-family: "space-mono", sans-serif;    
+    color: aliceblue; 
+}
+section{
+    padding: 0px 53px;
+}
+img{
+    box-shadow: #000000 2px 2px 20px;  
+}
+a{
+    color: aliceblue;
+    text-underline-offset: 10px;
+    text-decoration-thickness: 8px;
+}
+a:hover {
+    color: antiquewhite;
+    text-decoration: underline; 
+    text-decoration-thickness: 8px;
+    transition: text-decoration 0.3s ease; 
+} 
+.pilar{
+    text-decoration: none;
+    color: aliceblue;
+    font-size: 25px;
+    text-shadow: #151515 2px 2px 2px;  
+    letter-spacing: -0.529px;
+    line-height: 15px;
+    font-weight: bold;
+} 
+.pilar:hover{
+    color: antiquewhite;
+    transition: color 0.3s ease, transform 0.3s ease; 
+    text-decoration: none;
+}
+h1{
+    font-size: 25px;
+    text-shadow: #151515 2px 2px 2px;  
+    letter-spacing: -0.529px;
+    line-height: 15px;
+}
+h1:hover,
+h2:hover {
+    color: antiquewhite;
+    transition: color 0.3s ease, transform 0.3s ease; 
+}
+.top-div{
+    height: 10vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.sm-icon{
+    max-width: 20px;
+    max-height: 20px;
+}
+.sm-icon:hover{
+    transform: scale(1.1);
+    transition: transform 0.3s ease; 
+}
+
+@media screen and (max-width: 400px) {
+    h1 {
+        font-size: 5vw; 
+    }
+    h2 {
+        font-size: 6vw; 
+        line-height: 45px;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    h1{
+        font-size: 22px;
+    }
+    section {
+        padding: 0 2.5vw; 
+    }
+}

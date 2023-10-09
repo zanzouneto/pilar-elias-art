@@ -3,121 +3,95 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pilar Elias Art</title>
+    <title>Plias Elias Art</title>
+    <link rel="stylesheet" href="pilar.css">
     <link rel="stylesheet" href="index.css">
 </head>
-<body>
-  <!-- 
-    Headers
-  -->
-  <div class="sticker-div-1">
-    <h1>Pilar Elias<br> Art</h1>
-
-    <section class="home-art-divs-section">
-      <div class="home-art-div">
-        <img class="home-art-img" src="assets/painting 1.jpg" alt="">
-        <a class="home-art-a">Yellow and blue</a>
-      </div>
-      <div class="home-art-div">
-        <img class="home-art-img" src="assets/painting 5.jpg" alt="">
-        <a class="home-art-a">Cold and busy</a>
-      </div>
-    </section>
-
-    <!--
-      Grid 4
-    --> 
-
+<body class="slider-body">
     <section>
-      <div class="grid4-row-top">
-        <img class="grid4-img-left grid4-smaller" src="assets/brown on grey.jpg"> 
-        <img class="grid4-img" src="assets/Lady in red.jpg">
-      </div>
-      <div class="grid4-row-bottom">
-        <img class="grid4-img grid4-img-left" src="assets/Lady in blue.jpg">
-        <img class="grid4-img grid4-smaller" src="assets/Painting 6.jpg">
-      </div>
+        <div class="top-div">
+            <a class="pilar" href="index.html">Pilar Elias Art</a>
+            <div> 
+                <a href="https://www.instagram.com/pilareliasart/" target="_blank">
+                    <img class="sm-icon" src="assets/instagram icon.svg"></a>
+                <a href="https://www.facebook.com/artofpilarelias/" target="_blank">
+                    <img class="sm-icon" src="assets/facebook icon.svg"></a>
+            </div>
+        </div>
     </section>
-
-    <section  class="home-art-divs-section">
-      <div class="home-art-div">
-        <img  class="home-art-img" src="assets/painting 3.jpg" alt="">
-        <a class="home-art-a" href="painting.html">Bluish</a>
-      </div>
-      <div class="home-art-div">
-        <img class="home-art-img" src="assets/Painting 4.jpg" alt="">
-        <a class="home-art-a">Splash of red</a>
-      </div>
+    <section class="carousel-section">
+        </div>
+            <div class="carousel">
+                <div class="carousel-item">
+                    <img src="assets/Vivid autumn.jpg" alt="Painting 1">
+                    <a>
+                        <h2>Vivid autumn</h2>
+                    </a>
+                </div>
+                <div class="carousel-item">
+                    <img src="assets/Chaos in Hues.jpg" alt="Painting 2">
+                    <a href="painting.html">
+                        <h2>Chaos in Hues</h2>
+                    </a>
+                </div>
+                <div class="carousel-item about-div about-section">                        
+                    <!--About Section-->
+                    <p class="about-p">Pilar Elias is an accomplished artist hailing from Lebanon, where the vibrant hues of her acrylic paintings reflect her unique artistic vision. Her work is an exploration of colors and emotions. 
+                        <br>Pilar's journey into the world of art began later in life, but it was a love affair that sparked her creative spirit and set her on a path of unwavering dedication. 
+                    </p>  
+                </div>
+                <div class="carousel-item">
+                    <!--Vertical twins-->
+                    <div class="vertical-twins-div">
+                        <img class="vertical-twins-img" src="assets/dancers vertical twin 1.jpg">
+                        <img class="vertical-twins-img" src="assets/dancers vertical twin 2.jpg">
+                    </div>
+                    <h2>Dancers on black</h2>
+                </div>
+                <div class="carousel-item">
+                    <img src="assets/Red leaves.jpg">
+                    <h2>Red leaves</h2>
+                </div>
+                <div class="carousel-item">
+                    <!--3 in a row-->
+                    <div class="center-screen">
+                        <div class="inarow3">
+                        <img class="row3 img1st" src="assets/gold line.jpg">
+                        <img class="row3" src="assets/teardrops.jpg">
+                        <img class="row3 img3rd" src="assets/candles.jpg">
+                        </div>
+                    </div>          
+                </div>
+                <div class="carousel-item">
+                    <img src="assets/painting 6.jpg" alt="Painting 2">
+                    <h2>Painting 2</h2>
+                </div>
+                <div class="carousel-item">
+                    <!--Grid 4--> 
+                    <div class="grid4-row-top">
+                        <img class="grid4-img-left grid4-smaller" src="assets/brown on grey.jpg"> 
+                        <img class="grid4-img" src="assets/Lady in red.jpg">
+                    </div>
+                    <div class="grid4-row-bottom">
+                        <img class="grid4-img grid4-img-left" src="assets/Lady in blue.jpg">
+                        <img class="grid4-img grid4-smaller" src="assets/gold dark.jpg">
+                    </div>
+                </div>
+                <!-- LAST SLIDE -->    
+                <div class="carousel-item final-item">
+                    <img src="assets/candles.jpg" alt="">
+                    <h2>Candles</h2>
+                </div>
+                <!-- END OF SLIDES -->   
+            </div> 
+            <button class="prev-button">
+                <img src="assets/left.svg" class="arrow">
+            </button>
+            <button class="next-button">
+                <img src="assets/right.svg" class="arrow">
+            </button>
+            <script src="index.js"></script>
     </section>
-
-
-    <!--
-      Vertical twins
-    -->
-
-    <section>
-      <div class="vertical-twins-div right">
-        <img class="vertical-twin" src="assets/dancers vertical twin 1.jpg">
-        <img class="vertical-twin" src="assets/dancers vertical twin 2.jpg">
-      </div>
-    </section>
-  </div> 
-
-  <!--
-    About Section
-  -->
-
-  <section class="about-section">
-    <div class="about-div">
-      <p class="about-p">Pilar Elias is an accomplished artist hailing from Lebanon, where the vibrant hues of her acrylic paintings reflect her unique artistic vision. Her work is an exploration of colors and emotions. 
-        <br>Pilar's journey into the world of art began later in life, but it was a love affair that sparked her creative spirit and set her on a path of unwavering dedication. </p>  
-    </div>
-  </section>
-
-  <!-- 
-    3 in a line
-  -->
-
-  <section>
-    <div class="center-screen">
-      <div class="inarow3">
-        <img class="row3 img1st" src="assets/gold line.jpg">
-        <img class="row3" src="assets/teardrops.jpg">
-        <img class="row3 img3rd" src="assets/candles.jpg">
-      </div>
-    </div>
-  </section>
-  <!--
-    Vertical twins
-  -->
-  
-  <section class="red">
-    <div class="vertical-twins-div">
-      <img class="vertical-twin" src="assets/mud vertical twin 1.jpg">
-      <img class="vertical-twin" src="assets/mud vertical twin 2.jpg">
-    </div>
-  </section>
-  
-    <section class="home-art-divs-section">
-      <div class="home-art-div">
-        <img class="home-art-img" src="assets/braid of pink.jpg" alt="">
-        <a class="home-art-a">Braid of pink</a>
-      </div>
-    </section>
-
-  <!--
-    Grid 4
-  --> 
-
-  <section>
-    <div class="grid4-row-top">
-      <img class="grid4-img-left grid4-smaller" src="assets/dark skyline.jpg"> 
-      <img class="grid4-img" src="assets/darkness 3.jpg">
-    </div>
-    <div class="grid4-row-bottom">
-      <img class="grid4-img grid4-img-left" src="assets/darkness 1.jpg">
-      <img class="grid4-img grid4-smaller" src="assets/gold dark.jpg">
-    </div>
-  </section>
-
 </body>
+</html>
+

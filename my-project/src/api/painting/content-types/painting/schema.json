@@ -1,0 +1,58 @@
+{
+  "kind": "collectionType",
+  "collectionName": "paintings",
+  "info": {
+    "singularName": "painting",
+    "pluralName": "paintings",
+    "displayName": "Painting",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Title": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "PriceInDollars": {
+      "type": "biginteger"
+    },
+    "DateFinished": {
+      "type": "date"
+    },
+    "AvailableforSale": {
+      "type": "boolean"
+    },
+    "MainPicture": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "extraPictures": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "widthCm": {
+      "type": "integer"
+    },
+    "heightCm": {
+      "type": "integer"
+    },
+    "Materials": {
+      "type": "string"
+    }
+  }
+}
