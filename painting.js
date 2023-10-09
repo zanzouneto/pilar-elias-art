@@ -27,3 +27,47 @@ thumbnails.forEach((thumbnail, index) => {
         updateThumbnail();
     });
 });
+
+//dynamic content// 
+document.addEventListener('DOMContentLoaded', () => {
+    const apiUrl = 'http://localhost:1337/api/paintings?populate=*'; // Replace with your API URL
+    const titleElement = document.getElementById('dynamic-title');
+    const priceElement = document.getElementById('dynamic-price');
+    const dateElement = document.getElementById('dynamic-date');
+    const availabilityElement = document.getElementById('dynamic-availability');
+    const dimensionsElement = document.getElementById('dynamic-dimensions');
+    const materialsElement = document.getElementById('dynamic-materials');
+
+    fetch(apiUrl)
+        .then((response) => {
+            if (!response.ok) {
+                throw new Error('Network response was not ok');
+            }
+            return response.json();
+        })
+        .then((data) => {
+            
+            // Assuming the API response contains an array of paintings
+            const painting = data.data[0].attributes;
+            console.log(titleElement, priceElement, dateElement, availabilityElement, materialsElement);
+            
+            // Populate HTML elements with painting data
+            titleElement.textContent = painting.Title;
+            priceElement.textContent = `$${painting.PriceInDollars}`;
+            // dateElement.textContent = new Date(painting.DateFinished).toLocaleDateString();
+            // availabilityElement.textContent = painting.AvailableforSale ? 'Available' : 'Not Available';
+            dimensionsElement.textContent = `${painting.widthCm}cm x ${painting.heightCm}cm`;
+            materialsElement.textContent = painting.Materials;
+
+        })
+        .catch((error) => {
+            console.error('Fetch error:', error);
+        });
+
+    
+        
+    }
+);
+
+
+
