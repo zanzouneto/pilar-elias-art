@@ -39,7 +39,6 @@ prevButton.addEventListener("click", () => {
 });
 
 nextButton.addEventListener("click", () => {
-  console.log("yay");
   currentIndex = currentIndex + 1;
   if (currentIndex >= carousel.children.length) {
     currentIndex = 0;
@@ -71,6 +70,7 @@ function scrollToItem(index) {
   const item = carousel.children[index];
   const vw = window.innerWidth; // Get the viewport width
   const scrollLeft = item.offsetLeft - vw * 0.025; // Adjusted for 95vw
+  console.log(scrollLeft, item, vw, index);
   carousel.scrollTo({
     left: scrollLeft,
     behavior: "smooth",
