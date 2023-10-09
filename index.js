@@ -76,5 +76,23 @@ function scrollToItem(index) {
     });
 }
 
+
+// Event listeners for thumbnail clicks (click and touchend)
+thumbnails.forEach((thumbnail, index) => {
+    thumbnail.addEventListener('click', () => {
+        currentIndex = index;
+        updateSlider();
+        updateThumbnail();
+    });
+
+    thumbnail.addEventListener('touchend', () => {
+        currentIndex = index;
+        updateSlider();
+        updateThumbnail();
+    });
+});
+
+
 // Initialize the current slide
 updateCurrentSlide(currentIndex);
+
