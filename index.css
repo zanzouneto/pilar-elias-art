@@ -3,7 +3,9 @@
     overflow: hidden;
 }
 h2{
-    font-size: 22px;
+    font-size: 20px;
+    max-height: 5vh;
+    line-height: 0;
 }
 
 .carousel-section{
@@ -31,6 +33,7 @@ h2{
     height: 100%;
 }
 .carousel{
+    height: 90vh;
     display: flex;
     overflow-x: hidden;
     width: 100%;
@@ -38,7 +41,8 @@ h2{
 }
 .carousel-item{
     flex-shrink: 0;
-    height: 90vh;
+    max-height: 85vh;
+    overflow-y: hidden;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -52,8 +56,8 @@ h2{
     opacity: 0.4;
 }
 .carousel-item img{
-    height: 90%;
-    object-fit: contain;
+    max-height: 80vh;
+    object-fit: contain
 }
 /*arrows*/
 .prev-button,
@@ -114,6 +118,7 @@ h2{
     margin-bottom: 25px;
     flex-flow: wrap;
     align-items: flex-end;
+    object-fit: contain;
 }
 .grid4-row-bottom{
     display:flex;
@@ -136,11 +141,14 @@ h2{
 .about-p{
     position: relative;
     font-family: "Questrial";
-    font-size: 30px;
+    font-size: 25px;
     line-height: 150%; 
     width: 60%;
     z-index: 3;
     text-shadow: #0b0b0b 1px 1px 3px;
+    max-height: 80vh;
+    overflow-x: scroll;
+    overflow-x: hidden;
 }
 .about-section{
     position: relative;
@@ -193,10 +201,12 @@ h2{
         font-size: 16px;
         width: 70%;
         height: 100%;
-
     }
 }
 @media screen and (max-width: 800px) {
+    h2{
+        font-size: 18px;
+    }
     .carousel-section {
         padding: 0 2.5vw; 
     }
@@ -269,6 +279,7 @@ h2{
     }
     .grid4-img {
         max-width: 45vw;
+        max-height: 20vh%;
     }
     .grid4-smaller{
         max-width: 46vw;
