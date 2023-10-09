@@ -37,6 +37,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const availabilityElement = document.getElementById('dynamic-availability');
     const dimensionsElement = document.getElementById('dynamic-dimensions');
     const materialsElement = document.getElementById('dynamic-materials');
+    const mainImageElement = document.getElementById('main-image'); // Add this line
 
     fetch(apiUrl)
         .then((response) => {
@@ -49,7 +50,7 @@ document.addEventListener('DOMContentLoaded', () => {
             
             // Assuming the API response contains an array of paintings
             const painting = data.data[0].attributes;
-            console.log(titleElement, priceElement, dateElement, availabilityElement, materialsElement);
+            console.log(painting);
             
             // Populate HTML elements with painting data
             titleElement.textContent = painting.Title;
@@ -58,14 +59,27 @@ document.addEventListener('DOMContentLoaded', () => {
             // availabilityElement.textContent = painting.AvailableforSale ? 'Available' : 'Not Available';
             dimensionsElement.textContent = `${painting.widthCm}cm x ${painting.heightCm}cm`;
             materialsElement.textContent = painting.Materials;
+            
+// Check if main image exists
+if (painting.MainPicture && painting.MainPicture.attributes) {
+    const mainPictureAttributes = painting.MainPicture.attributes;
+    if (mainPictureAttributes.url) {
+        // Main image URL exists, set the src attribute of the main image element
+        mainImageElement.src = mainPictureAttributes.url;
+    }
+    if (mainPictureAttributes.alternativeText) {
+        // Alt text exists, set the alt attribute of the main image element
+        mainImageElement.alt = mainPictureAttributes.alternativeText;
+    }
+}
 
+            
+            
         })
         .catch((error) => {
             console.error('Fetch error:', error);
         });
 
-    
-        
     }
 );
 
