@@ -202,6 +202,10 @@ h2{
         width: 70%;
         height: 100%;
     }
+    .carousel-item{
+        max-height: 75vh;
+        overflow: hidden;
+    }
 }
 @media screen and (max-width: 800px) {
     h2{
@@ -223,7 +227,7 @@ h2{
         top: auto;
     }  
     .carousel-item {
-        max-width: 95vw; 
+        max-width: 95vw;
         padding: 0; 
         justify-content: center;
     }
