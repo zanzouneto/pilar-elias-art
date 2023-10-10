@@ -30,14 +30,14 @@ thumbnails.forEach((thumbnail, index) => {
 
 //dynamic content// 
 document.addEventListener('DOMContentLoaded', () => {
-    const apiUrl = 'http://localhost:1337/api/paintings?populate=*'; // Replace with your API URL
+    const apiUrl = 'http://localhost:1337/api/paintings?populate=*'; 
     const titleElement = document.getElementById('dynamic-title');
     const priceElement = document.getElementById('dynamic-price');
     const dateElement = document.getElementById('dynamic-date');
     const availabilityElement = document.getElementById('dynamic-availability');
     const dimensionsElement = document.getElementById('dynamic-dimensions');
     const materialsElement = document.getElementById('dynamic-materials');
-    const mainImageElement = document.getElementById('main-image'); // Add this line
+    const mainImageElement = document.getElementById('main-image'); 
 
     fetch(apiUrl)
         .then((response) => {
@@ -52,29 +52,21 @@ document.addEventListener('DOMContentLoaded', () => {
             const painting = data.data[0].attributes;
             console.log(painting);
             
-            // Populate HTML elements with painting data
             titleElement.textContent = painting.Title;
             priceElement.textContent = `$${painting.PriceInDollars}`;
             // dateElement.textContent = new Date(painting.DateFinished).toLocaleDateString();
             // availabilityElement.textContent = painting.AvailableforSale ? 'Available' : 'Not Available';
             dimensionsElement.textContent = `${painting.widthCm}cm x ${painting.heightCm}cm`;
             materialsElement.textContent = painting.Materials;
-            
-// Check if main image exists
-if (painting.MainPicture && painting.MainPicture.attributes) {
-    const mainPictureAttributes = painting.MainPicture.attributes;
-    if (mainPictureAttributes.url) {
-        // Main image URL exists, set the src attribute of the main image element
-        mainImageElement.src = mainPictureAttributes.url;
-    }
-    if (mainPictureAttributes.alternativeText) {
-        // Alt text exists, set the alt attribute of the main image element
-        mainImageElement.alt = mainPictureAttributes.alternativeText;
-    }
-}
 
-            
-            
+            // Check if main image exists
+            if (painting.MainPicture && painting.MainPicture.data.attributes.url) {
+                // Main image exists, set the src attribute of the main image element
+                mainImageElement.src = "http://localhost:1337" + painting.MainPicture.data.attributes.url;
+                mainImageElement.alt = painting.MainPicture.data.attributes.alternativeText;
+            }
+
+
         })
         .catch((error) => {
             console.error('Fetch error:', error);

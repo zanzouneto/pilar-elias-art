@@ -1,11 +1,12 @@
 p{
     font-size: 25.817px;
-    line-height: 138.023%;
+    line-height: 50%;
     letter-spacing: 0.933px;
 }
 .painting{
-    width: 100%;
     height: auto;
+    max-height: 100vh;
+    object-fit: contain;
 }
 .center-content{
     display: flex;
