@@ -2,10 +2,11 @@
 .slider-body{
     overflow: hidden;
 }
-h2{
+a{
     font-size: 20px;
-    max-height: 5vh;
-    line-height: 0;
+    height: 5vh;
+    line-height: normal;
+    font-weight: bold;
 }
 
 .carousel-section{
@@ -41,12 +42,12 @@ h2{
 }
 .carousel-item{
     flex-shrink: 0;
-    max-height: 85vh;
+    max-height: 90vh;
     overflow-y: hidden;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    padding: 0px 20px 20px 5vw;
+    padding: 0 20px 0 5vw;
     box-sizing: border-box;
     transition: transform 1s ease;
 }
@@ -97,7 +98,7 @@ h2{
 .vertical-twins-div{
     display: flex;
     gap: 25px;
-    max-height: 90vh;
+    max-height: 80vh;
 }
 .vertical-twins-img{
     max-height: 80vh;
@@ -208,7 +209,7 @@ h2{
     }
 }
 @media screen and (max-width: 800px) {
-    h2{
+    a{
         font-size: 18px;
     }
     .carousel-section {
