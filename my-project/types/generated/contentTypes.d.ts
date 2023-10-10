@@ -383,6 +383,7 @@ export interface ApiPaintingPainting extends Schema.CollectionType {
     widthCm: Attribute.Integer;
     heightCm: Attribute.Integer;
     Materials: Attribute.String;
+    slug: Attribute.UID<'api::painting.painting', 'Title'> & Attribute.Required;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
