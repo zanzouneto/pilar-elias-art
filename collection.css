@@ -1,16 +1,18 @@
 img{
-    max-width: 300px;
     max-height: 300px;
     object-fit: contain;
+    display: flex;
+    flex-direction: column;
 }
 #paintingsGallery{
     display: flex;
+    gap: 50px;
     flex-direction: row;
     flex-wrap: wrap;
+    justify-content: space-between;
 }
 .painting-item{
     display: flex;
     flex-direction: column;
-    width: 30vw;
-    height: 300px;
+    justify-content: flex-end;
 }
