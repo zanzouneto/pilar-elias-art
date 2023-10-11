@@ -1,0 +1,16 @@
+img{
+    max-width: 300px;
+    max-height: 300px;
+    object-fit: contain;
+}
+#paintingsGallery{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.painting-item{
+    display: flex;
+    flex-direction: column;
+    width: 30vw;
+    height: 300px;
+}
