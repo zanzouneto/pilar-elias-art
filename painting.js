@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
         return;
     }
 
-    const apiUrl = `/api/paintings?populate=*`;
+    const apiUrl = `http://localhost:1337/api/paintings?populate=*`;
 
     fetch(apiUrl)
         .then(response => response.json())

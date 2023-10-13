@@ -9,11 +9,11 @@
     "build": "strapi build",
     "strapi": "strapi"
   },
-  "devDependencies": {},
   "dependencies": {
-    "@strapi/strapi": "4.14.3",
-    "@strapi/plugin-users-permissions": "4.14.3",
+    "@code-mancers/strapi-plugin-multi-site-vercel-deploy": "^2.0.11",
     "@strapi/plugin-i18n": "4.14.3",
+    "@strapi/plugin-users-permissions": "4.14.3",
+    "@strapi/strapi": "4.14.3",
     "better-sqlite3": "8.6.0"
   },
   "author": {
