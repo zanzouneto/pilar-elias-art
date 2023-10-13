@@ -22,13 +22,19 @@ function updateCurrentSlide(index) {
 }
 
 prevButton.addEventListener("click", () => {
-    currentIndex = (currentIndex - 1 + carousel.children.length) % carousel.children.length;
+    currentIndex--;
+    if (currentIndex < 0) {
+        currentIndex = carousel.children.length - 1;
+    }
     scrollToItem(currentIndex);
     updateCurrentSlide(currentIndex);
 });
 
 nextButton.addEventListener("click", () => {
-    currentIndex = (currentIndex + 1) % carousel.children.length;
+    currentIndex++;
+    if (currentIndex >= carousel.children.length) {
+        currentIndex = 0;
+    }
     scrollToItem(currentIndex);
     updateCurrentSlide(currentIndex);
 });
@@ -36,9 +42,15 @@ nextButton.addEventListener("click", () => {
 // Keyboard navigation
 document.addEventListener("keydown", (e) => {
     if (e.key === "ArrowLeft") {
-        currentIndex = (currentIndex - 1 + carousel.children.length) % carousel.children.length;
+        currentIndex--;
+        if (currentIndex < 0) {
+            currentIndex = carousel.children.length - 1;
+        }
     } else if (e.key === "ArrowRight") {
-        currentIndex = (currentIndex + 1) % carousel.children.length;
+        currentIndex++;
+        if (currentIndex >= carousel.children.length) {
+            currentIndex = 0;
+        }
     }
     scrollToItem(currentIndex);
     updateCurrentSlide(currentIndex);
