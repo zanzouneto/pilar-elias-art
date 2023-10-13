@@ -1,11 +1,13 @@
 p{
     font-size: 25.817px;
     letter-spacing: 0.933px;
+    line-height: 30px;
 }
 .painting{
     height: auto;
     max-height: 100vh;
     object-fit: contain;
+    max-width: 100vw;
 }
 .center-content{
     display: flex;
@@ -27,6 +29,7 @@ p{
 }
 h2{
     font-size: 50px;
+    line-height: 58px;
 }
 
 /* Slider */
