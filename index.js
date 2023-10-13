@@ -81,3 +81,19 @@ function scrollToItem(index) {
 
 // Initialize the current slide
 updateCurrentSlide(currentIndex);
+
+function scrollToItem(index) {
+  const vw = window.innerWidth; // Get the viewport width
+  let scrollAmount;
+
+  if (vw <= 800) { // Assuming 800px is your breakpoint for mobile view
+      scrollAmount = 0.95 * vw * index; // Adjusted for 95vw on smaller screens
+  } 
+
+  setTimeout(() => {
+      carousel.scrollTo({
+          left: scrollAmount,
+          behavior: "smooth",
+      });
+  }, 200);
+}
